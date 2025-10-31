@@ -1,9 +1,9 @@
-[[rewrites]]
+[[redirects]]
   from = "/help/*"
   to = "https://chatbase.co/J9jzeWbLBTD_BrL26uPn-/help/:splat"
   status = 200
 
-[[rewrites]]
+[[redirects]]
   from = "/help"
   to = "https://chatbase.co/J9jzeWbLBTD_BrL26uPn-/help"
   status = 200
