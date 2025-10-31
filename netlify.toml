@@ -1,16 +1,12 @@
 # netlify.toml
-# Chatbase Help Page proxy
+# Correct setup for Chatbase Help page proxy (avoids redirect loops)
 
-# Root request -> Chatbase Help page
-[[redirects]]
-  from = "/"
-  to = "https://www.chatbase.co/J9jzeWbLBTD_BrL26uPn-/help"
-  status = 200
-  force = true
-
-# All other requests (including assets) go directly to Chatbase
-[[redirects]]
-  from = "/*"
+[[rewrites]]
+  from = "/help/*"
   to = "https://www.chatbase.co/J9jzeWbLBTD_BrL26uPn-/help/:splat"
   status = 200
-  force = true
+
+[[rewrites]]
+  from = "/help"
+  to = "https://www.chatbase.co/J9jzeWbLBTD_BrL26uPn-/help"
+  status = 200
