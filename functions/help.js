@@ -1,8 +1,9 @@
 const fetch = require('node-fetch');
 
 exports.handler = async (event) => {
-  const path = event.path.replace(/^\/help/, '') || '/';
-  const url = `https://chatbase.co/J9jzeWbLBTD_BrL26uPn-/help${path}`;
+  // For root path, use '/help', otherwise use the full path
+  const path = event.path === '/' ? '/help' : event.path;
+  const url = `https://chatbase.co/J9jzeWbLBTD_BrL26uPn-${path}`;
 
   try {
     const response = await fetch(url);
