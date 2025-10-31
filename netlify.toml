@@ -1,18 +1,9 @@
-# netlify.toml
-
-# 1) When someone hits the root, send them to /help (a normal redirect)
-[[redirects]]
-  from = "/"
-  to   = "/help"
-  status = 301
-
-# 2) Proxy the Help page paths to Chatbase (the actual content)
 [[rewrites]]
   from = "/help/*"
-  to   = "https://www.chatbase.co/J9jzeWbLBTD_BrL26uPn-/help/:splat"
+  to = "https://chatbase.co/J9jzeWbLBTD_BrL26uPn-/help/:splat"
   status = 200
 
 [[rewrites]]
   from = "/help"
-  to   = "https://www.chatbase.co/J9jzeWbLBTD_BrL26uPn-/help"
+  to = "https://chatbase.co/J9jzeWbLBTD_BrL26uPn-/help"
   status = 200
