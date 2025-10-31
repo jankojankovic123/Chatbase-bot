@@ -1,9 +1,9 @@
-[[redirects]]
-  from = "/help/*"
-  to = "https://chatbase.co/J9jzeWbLBTD_BrL26uPn-/help/:splat"
-  status = 200
+[build]
+  command = "npm install"
+  publish = "."
 
 [[redirects]]
-  from = "/help"
-  to = "https://chatbase.co/J9jzeWbLBTD_BrL26uPn-/help"
+  from = "/*"
+  to = "/.netlify/functions/help"
   status = 200
+  force = true
